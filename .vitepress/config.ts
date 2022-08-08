@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { getMds } from '../scripts'
 
 export default defineConfig({
   title: '阿哲',
@@ -6,19 +7,10 @@ export default defineConfig({
   lastUpdated: true,
   outDir: "docs",
   themeConfig: {
-    nav: [
+    sidebar: [
       {
-        text: '学习笔记',
-        link: '/pages/note/',
+        items: getMds()
       },
-      {
-        text: '经验笔记',
-        link: '/engineering/',
-      },
-      {
-        text: '工具软件',
-        link: '/engineering/',
-      }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.dev/TwoBeefly/mark_down' },
