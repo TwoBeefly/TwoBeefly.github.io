@@ -10,6 +10,7 @@
     "dev": "vitepress dev --port 7172",
     "build": "vitepress build",
     "serve": "vitepress serve",
+    "push": "esno scripts/push.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
