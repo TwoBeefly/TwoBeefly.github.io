@@ -1,6 +1,6 @@
 import { execSync } from 'child_process'
 
-execSync('nr build', { stdio: 'inherit' })
+execSync('npm run build', { stdio: 'inherit' })
 
 execSync('git add .', { stdio: 'inherit' })
 execSync('git commit -m "update"', { stdio: 'inherit' })
