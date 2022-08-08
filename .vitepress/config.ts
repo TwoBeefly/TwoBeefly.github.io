@@ -4,6 +4,7 @@ export default defineConfig({
   title: '阿哲',
   lang: 'zh-CN',
   lastUpdated: true,
+  outDir: "docs",
   themeConfig: {
     nav: [
       {
