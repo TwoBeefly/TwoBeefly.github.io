@@ -9,7 +9,13 @@ export default defineConfig({
   themeConfig: {
     sidebar: [
       {
-        items: getMds()
+        items: [
+          {
+            text: "Markdown语法",
+            link: "/index.md"
+          },
+          ...getMds()
+        ]
       },
     ],
     socialLinks: [

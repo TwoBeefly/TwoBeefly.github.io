@@ -12,9 +12,10 @@ export function getMds(root_path = '/'): DefaultTheme.SidebarItem[] {
     const fullPath = path.join(dir_path, file)
     const content = fs.readFileSync(fullPath, 'utf-8')
     const stats = fs.statSync(fullPath)
+
     if (!stats.isDirectory()) {
       return {
-        text: content.match(/^#\s+(.*)$/m)?.[1],
+        text: (content).match(/#\s+(.*)$/m)?.[1],
         link: `/pages${root_path}${file}`,
       }
     }
@@ -23,4 +24,4 @@ export function getMds(root_path = '/'): DefaultTheme.SidebarItem[] {
     }
   }) as DefaultTheme.SidebarItem[]
 }
-console.log(getMds('/'))
+// console.log(getMds('/'))
