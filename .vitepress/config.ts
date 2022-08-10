@@ -30,4 +30,11 @@ export default defineConfig({
     },
     lastUpdatedText: '上次更新于',
   },
+  markdown: {
+    config: (md) => {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      md.use(require('markdown-it-katex'))
+    },
+  },
+  head: [['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css', crossorigin: '' }]],
 })
